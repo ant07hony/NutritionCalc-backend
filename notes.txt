@@ -1,0 +1,11 @@
+App functionality:
+- app will be full crud
+- app will access an API
+- app will be a single page
+
+UI/UX:
+- input for food items (create function)
+- button for submission of list (react form)
+- option to edit items on list (update/edit function)
+- option to delete ites from list (delete function)
+- nutrition label UI to display total of nutritional content of list
