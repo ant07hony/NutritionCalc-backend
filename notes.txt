@@ -9,3 +9,15 @@ UI/UX:
 - option to edit items on list (update/edit function)
 - option to delete ites from list (delete function)
 - nutrition label UI to display total of nutritional content of list
+
+
+RESTFUL ROUTING
+/nutrition/ - GET - index - db.Nutrition.find()
+
+/nutrition/ - POST - create - db.Nutrition.create(req.body)
+
+/nutrition/:id - GET - show - db.findById(req.params.id)
+
+/nutrition/:id - PUT - update - db.findById(req.params.id, req.body, options)
+
+/nutrition/:id - DELETE - destroy - db.findById(req.params.id)
