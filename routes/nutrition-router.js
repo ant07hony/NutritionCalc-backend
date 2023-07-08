@@ -1,21 +1,16 @@
 const express = require("express")
 const router = express.Router()
+const nutritionCtrl = require
 
 
 // NUTRITON INDEX ROUTE
-router.get('/', async (request, response) => {
-    response.status(200).json({message: "nutrition index route"})
-})
+router.get('/', nutritionCtrl.index)
 
 // NUTRITION CREATE ROUTE
-router.post('/', async (request, response) => {
-    response.status(200).json({message: "Nutrition create route"})
-})
+router.post('/', nutritionCtrl.create)
 
 // NUTRITON SHOW ROUTE
-router.get('/:id', async (request, response) => {
-    response.status(200).json({message: "Nutrition show route: " + request.params.id})
-})
+router.get('/:id', nutritionCtrl.getOne)
 
 // NUTRITION UPDATE ROUTE
 router.put('/:id', async (request, response) => {
