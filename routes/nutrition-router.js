@@ -1,6 +1,6 @@
 const express = require("express")
 const router = express.Router()
-const nutritionCtrl = require
+const nutritionCtrl = require('../controllers/nutrition-controller')
 
 
 // NUTRITON INDEX ROUTE
@@ -13,13 +13,13 @@ router.post('/', nutritionCtrl.create)
 router.get('/:id', nutritionCtrl.getOne)
 
 // NUTRITION UPDATE ROUTE
-router.put('/:id', async (request, response) => {
-    response.status(200).json({message: "Nutrition update route: " + request.params.id})
+router.put('/:id', async (req, res) => {
+    res.status(200).json({message: "Nutrition update route: " + req.params.id})
 })
 
 // NUTRITION DESTROY ROUTE
-router.delete('/:id', async (request, response) => {
-    response.status(200).json({message: "Nutrition delete route: " + request.params.id})
+router.delete('/:id', async (req, res) => {
+    res.status(200).json({message: "Nutrition delete route: " + req.params.id})
 })
 
 module.exports = router
